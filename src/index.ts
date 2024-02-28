@@ -6,7 +6,7 @@ type Employee = Record<{
     id: string;
     name: string;
     email: string;
-    hireDate: string;
+    hireDate: Date;
     department: string;
     position: string;
     createdAt: nat64;
@@ -16,7 +16,7 @@ type Employee = Record<{
 type EmployeePayload = Record<{
     name: string;
     email: string;
-    hireDate: string;
+    hireDate: Date;
     department: string;
     position: string;
 }>;
@@ -26,7 +26,7 @@ type Salary = Record<{
     id: string;
     employee_id: string;
     amount: number;
-    payment_date: string;
+    payment_date: Date;
     created_date: nat64;
     updated_at: Opt<nat64>;
 }>;
@@ -34,7 +34,7 @@ type Salary = Record<{
 type SalaryPayload = Record<{
     employee_id: string;
     amount: number;
-    payment_date: string;
+    payment_date: Date;
 }>;
 
 // Create a map to store employee records
